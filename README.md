@@ -1,16 +1,15 @@
 # Simple Neural Networks
 
-The repo contains the same neural network implemented with 5 different libraries -
+Introductory examples in deep learning may sometimes be too verbose, often up to
+300 lines, which makes it hard to actually see what is going on. This repo is an
+attempt to fix this - the longest example is 39 lines (31 LOC). It contains the
+same neural network implemented with 5 different libraries -
 [Numpy](http://www.numpy.org/), [Theano](http://www.deeplearning.net/software/theano/),
 [TensorFlow](https://www.tensorflow.org/), [Keras](http://keras.io/) and
-[Torch](http://torch.ch/). The idea is to provide a bare bones implementation of
-a network trained on real-world data (the [MNIST](http://yann.lecun.com/exdb/mnist/)
-database of handwritten digits) that can serve as a starting point to build more
-complex architectures.
-
-The net is a simple multilayer perceptron with a hidden layer of 100 neurons and
-an output layer with 10 neurons, and is trained with mini batch gradient descent.
-It can achieve accuracy of 97.8% on the MNIST dataset.
+[Torch](http://torch.ch/). The network is a simple multilayer perceptron with a
+hidden layer of 100 neurons and an output layer with 10 neurons, and is trained
+on the [MNIST](http://yann.lecun.com/exdb/mnist/) database of handwritten digits.
+It can achieve accuracy of 97.8%.
 
 ```shell
 $ python mlp_numpy.py
