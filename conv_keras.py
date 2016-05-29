@@ -7,14 +7,11 @@ from keras.optimizers import SGD
 trX, trY, teX, teY = mnist.load_data(one_hot=True, reshape=(-1, 1, 28, 28))
 
 model = Sequential()
-model.add(Convolution2D(8, 5, 5, input_shape=trX.shape[1:]))
-model.add(Activation('sigmoid'))
+model.add(Convolution2D(8, 5, 5, input_shape=trX.shape[1:], activation='sigmoid'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
-model.add(Dense(100))
-model.add(Activation('sigmoid'))
-model.add(Dense(10))
-model.add(Activation('softmax'))
+model.add(Dense(100, activation='sigmoid'))
+model.add(Dense(10, activation='softmax'))
 
 num_epochs, batch_size, learn_rate = 30, 10, 0.2
 
